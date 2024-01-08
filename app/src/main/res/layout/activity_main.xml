@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!--    <ImageView-->
+    <!--            android:id="@+id/pdfImage"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@android:color/white"-->
+    <!--            android:contentDescription="@null"-->
+    <!--            android:scaleType="fitCenter" />-->
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/BarList">
+        <TextView
+                android:text="File Name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/fileName"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:textColor="#FFFFFF"
+                android:gravity="center"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/TopBar">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:paddingRight="24dp"
+                    android:id="@+id/EditSec">
+                <Button
+                        android:text="Undo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/undoButton" android:layout_weight="1"/>
+                <Button
+                        android:text="Redo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/redoButton" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="2" android:id="@+id/DrawToolSec">
+                <Button
+                        android:text="Hand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/selButton" android:layout_weight="1"/>
+                <Button
+                        android:text="Pen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/penButton" android:layout_weight="1"/>
+                <Button
+                        android:text="Highlighter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/hilButton" android:layout_weight="1"/>
+                <Button
+                        android:text="Eraser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/ersButton" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/pdfLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/PageBar">
+            <Button
+                    android:text="Previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/prePage" android:layout_weight="1"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/pageNum" android:layout_weight="1"/>
+            <Button
+                    android:text="Next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/nexPage" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
